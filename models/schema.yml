@@ -1,0 +1,53 @@
+version: 2
+
+sources:
+  - name: formula1
+    description: Formula1 data stored in BigQuery coming from the online Ergast database
+    database: armin-playground
+    schema: formula1
+    tables:
+      - name: circuits
+        description: Contains all circuits ever raced at in F1 history
+
+      - name: constructor_results
+        description: Contains all results from every constructor that has competed
+
+      - name: constructor_standings
+        description: Contains constructor results of every F1 race
+
+      - name: constructors
+        description: Contains all constructors that have competed
+
+      - name: driver_standings
+        description: Contains driver results of every F1 race
+
+      - name: drivers
+        description: Contains all drivers that have ever competed
+
+      - name: lap_times
+        description: Contains lap times for every race
+
+      - name: pit_stops
+        description: Contains pit stop times for every race
+
+      - name: qualifying
+        description: Contains qualifying times for every race
+
+      - name: races
+        description: Contains all races
+
+      - name: results
+        description: Contains all race results
+
+      - name: seasons
+        description: Contains all the seasons of F1
+
+      - name: sprint_results
+        description: Contains the sprint results (rather new racing format)
+
+      - name: status
+        description: Link table that contains the different race status in F1
+
+models:
+  - name: top_drivers
+    description: Shows all drivers that have won a grand prix, sorted by most winningest drivers DESC
