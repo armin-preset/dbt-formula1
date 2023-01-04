@@ -1,0 +1,42 @@
+version: 2
+exposures:
+- name: All Winners [chart]
+  type: analysis
+  maturity: low
+  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+80%7D
+  description: ''
+  depends_on:
+  - ref('top_drivers')
+  owner:
+    name: Armin Efendic
+    email: unknown
+- name: Top 50 Points Scored [chart]
+  type: analysis
+  maturity: low
+  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+81%7D
+  description: ''
+  depends_on:
+  - ref('top_drivers')
+  owner:
+    name: Armin Efendic
+    email: unknown
+- name: Formula 1 [dashboard]
+  type: dashboard
+  maturity: high
+  url: https://956c44ad.us2a.app.preset.io/superset/dashboard/9/
+  description: ''
+  depends_on:
+  - ref('top_drivers')
+  owner:
+    name: Armin Efendic
+    email: unknown
+- name: Formula 1 (another) [dashboard]
+  type: dashboard
+  maturity: high
+  url: https://956c44ad.us2a.app.preset.io/superset/dashboard/10/
+  description: ''
+  depends_on:
+  - ref('top_drivers')
+  owner:
+    name: Armin Efendic
+    email: unknown
