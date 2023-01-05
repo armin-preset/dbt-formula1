@@ -49,5 +49,8 @@ sources:
         description: Link table that contains the different race status in F1
 
 models:
-  - name: top_drivers
-    description: Shows all drivers that have won a grand prix, sorted by most winningest drivers DESC
+  - name: int_all_winners
+    description: Shows all drivers that have won a grand prix
+
+  - name: agg_winners
+    description: Shows total races won, points earned, and laps driven per driver
