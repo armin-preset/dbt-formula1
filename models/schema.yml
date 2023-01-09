@@ -54,3 +54,46 @@ models:
 
   - name: agg_winners
     description: Shows total races won, points earned, and laps driven per driver
+
+metrics:
+  - name: total_points
+    label: Total Points
+    model: ref('int_all_winners')
+    description: The total points a driver has scored
+
+    calculation_method: sum
+    expression: points
+
+    timestamp: year
+    time_grains: [year, all_time]
+
+    dimensions:
+      - driver_name
+
+  - name: total_wins
+    label: Total Wins
+    model: ref('int_all_winners')
+    description: The total wins a driver has scored
+
+    calculation_method: count
+    expression: position
+
+    timestamp: year
+    time_grains: [year, all_time]
+
+    dimensions:
+      - driver_name
+
+  - name: total_laps
+    label: Total Laps
+    model: ref('int_all_winners')
+    description: The total laps raced by a driver
+
+    calculation_method: sum
+    expression: laps
+
+    timestamp: year
+    time_grains: [year, all_time]
+
+    dimensions:
+      - driver_name
