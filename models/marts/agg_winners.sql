@@ -1,12 +1,12 @@
 with
 
 winners as (
-    select CONCAT(forename, " ", surname) as full_name, 
+    select driver_name, 
            COUNT(position) as total_wins,
            SUM(points) as total_points,
            SUM(laps) as total_laps,
     from {{ ref('int_all_winners') }}
-    group by full_name
+    group by driver_name
     order by total_wins DESC
 ),
 
