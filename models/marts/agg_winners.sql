@@ -1,3 +1,5 @@
+{{ config(schema='formula1') }}
+
 with
 
 winners as (
@@ -15,4 +17,4 @@ winners_with_rank as (
     from winners
 )
 
-select * from winners_with_rank
+select * from winners

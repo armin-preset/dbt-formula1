@@ -1,9 +1,29 @@
 version: 2
 exposures:
-- name: Agg Winners Table [chart]
+- name: Top 10 Points New [chart]
   type: analysis
   maturity: low
-  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+82%7D
+  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+89%7D
+  description: ''
+  depends_on:
+  - ref('int_all_winners')
+  owner:
+    name: Armin Efendic
+    email: unknown
+- name: All Wins Per Season (Stacked) [chart]
+  type: analysis
+  maturity: low
+  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+90%7D
+  description: ''
+  depends_on:
+  - ref('int_all_winners')
+  owner:
+    name: Armin Efendic
+    email: unknown
+- name: Top 10 Points [chart]
+  type: analysis
+  maturity: low
+  url: https://956c44ad.us2a.app.preset.io/superset/explore/?form_data=%7B%22slice_id%22:+93%7D
   description: ''
   depends_on:
   - ref('agg_winners')
@@ -16,6 +36,7 @@ exposures:
   url: https://956c44ad.us2a.app.preset.io/superset/dashboard/11/
   description: ''
   depends_on:
+  - ref('int_all_winners')
   - ref('agg_winners')
   owner:
     name: Armin Efendic

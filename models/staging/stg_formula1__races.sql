@@ -1,3 +1,5 @@
+{{ config(schema='formula1') }}
+
 with
 
 source_races as (
